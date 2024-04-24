@@ -5,7 +5,7 @@ const { User } = require("../models");
 const verifyToken = async (req, res, next) => {
 
     try {
-        if (!req.headers.token) res.status(400).json({ status: 400, message: "token required", data: {} })
+        if (!req.headers.token) res.status(400).json({ status: 400, message: "token required", data: { } })
 
         let getToken = req.headers.token
 
